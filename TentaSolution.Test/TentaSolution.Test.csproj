@@ -53,6 +53,12 @@
     <Compile Include="MoviePlayerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TentaSolution.MoviePlayer\TentaSolution.MoviePlayer.csproj">
+      <Project>{5F6BF1E1-551C-4CF5-BB4D-D298847C81C0}</Project>
+      <Name>TentaSolution.MoviePlayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

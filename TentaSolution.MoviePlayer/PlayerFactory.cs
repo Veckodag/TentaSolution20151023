@@ -9,13 +9,13 @@ namespace TentaSolution.MoviePlayer
     public class PlayerFactory
     {
         private IPlayer myPlayer;
-        public IPlayer CreatePlayer(string company)
+        public IPlayer CreatePlayer(string companyName)
         {
-            if (company == "SF")
+            if (companyName == "SF")
             {
                 myPlayer = new SFPlayer();
             }
-            else if (company == "Netfilx")
+            else if (companyName == "Netflix")
             {
                 myPlayer = new NetflixPlayer();
             }

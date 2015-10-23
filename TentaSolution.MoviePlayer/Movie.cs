@@ -8,7 +8,12 @@ namespace TentaSolution.MoviePlayer
 {
     public class Movie
     {
+        public Movie(string name)
+        {
+            Name = name;
+        }
         public string Name { get; set; }
         public bool HasBeenPlayed { get; set; }
+        public string WatchedOn { get; set; }
     }
 }

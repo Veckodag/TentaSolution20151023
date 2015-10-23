@@ -2,6 +2,6 @@
 {
     public interface IPlayer
     {
-        void PlayMovie(string movieName);
+        string PlayMovie(string movieName);
     }
 }

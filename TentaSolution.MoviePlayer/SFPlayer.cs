@@ -9,9 +9,9 @@ namespace TentaSolution.MoviePlayer
 {
     public class SFPlayer : IPlayer
     {
-        public void PlayMovie(string movieName)
+        public string PlayMovie(string movieName)
         {
-           Debug.WriteLine("Watching " + movieName + " on SF");
+           return "Watching " + movieName + " on SF";
         }
     }
 }

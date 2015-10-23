@@ -9,9 +9,9 @@ namespace TentaSolution.MoviePlayer
 {
     class NetflixPlayer : IPlayer
     {
-        public void PlayMovie(string movieName)
+        public string PlayMovie(string movieName)
         {
-            Debug.WriteLine("Watching " + movieName + " on Netflix");
+            return "Watching " + movieName + " on Netflix";
         }
 
     }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="00f48ddf-a80c-4664-9d1d-795436e129d6" name="MovieSystem" linkedPackageId="2c3c93a8-8618-4207-beaa-417628fcd112" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="00f48ddf-a80c-4664-9d1d-795436e129d6" name="MovieSystem" linkedPackageId="2c3c93a8-8618-4207-beaa-417628fcd112" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <ownedCommentsInternal>
     <comment Id="ad83eaaa-ea5d-4022-9eca-78fdfef89047">
       <elementDefinition Id="07e82821-2cfe-4137-a7dd-bca0e5d32bdb" />
@@ -88,6 +88,28 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="ec0581ed-514d-4e6a-ba75-acf45a5284b3" name="SF" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="29512ba9-e8e9-4bb7-a3b1-624d9265c69b" />
+        <generalsInternal>
+          <generalization Id="1601971d-6aa6-4816-a35b-3f3f9e1f2e02" isSubstitutable="false">
+            <actorMoniker Id="a5a7bb4e-bc17-4699-b7a3-89fdb8fb9aa6" LastKnownName="Producer" />
+            <elementDefinition Id="f49eccae-2fb0-47de-b12c-26c65b23eccd" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="eecb96b5-cfe4-4bec-9857-5194b899c051" name="Netflix" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b45379e-a4aa-4433-9462-0aba661e98c8" />
+        <generalsInternal>
+          <generalization Id="c0e46acf-c79f-4e7b-be5c-9a2dd8b8976a" isSubstitutable="false">
+            <actorMoniker Id="a5a7bb4e-bc17-4699-b7a3-89fdb8fb9aa6" LastKnownName="Producer" />
+            <elementDefinition Id="889ee77e-3f7e-40ab-a1f1-c6d99c28ba9e" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="2c3c93a8-8618-4207-beaa-417628fcd112" name="TentaSolution.Modeling">
     <elementDefinition Id="3d3cd93b-1803-48af-83d5-318c7e423793" />

@@ -962,6 +962,42 @@
         Id="a471a601-6acb-49af-b6b2-3bcb1e9007b5"
         name="ExecutionEvent" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="29512ba9-e8e9-4bb7-a3b1-624d9265c69b"
+        name="SF"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="f49eccae-2fb0-47de-b12c-26c65b23eccd"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="da8b04a9-1088-4df9-8250-471c045d3556"
+              LastKnownName="Producer"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="8b45379e-a4aa-4433-9462-0aba661e98c8"
+        name="Netflix"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="889ee77e-3f7e-40ab-a1f1-c6d99c28ba9e"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="da8b04a9-1088-4df9-8250-471c045d3556"
+              LastKnownName="Producer"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

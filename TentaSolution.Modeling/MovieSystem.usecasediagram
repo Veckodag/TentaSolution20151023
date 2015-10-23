@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="00f48ddf-a80c-4664-9d1d-795436e129d6" name="MovieSystem" linkedPackageId="2c3c93a8-8618-4207-beaa-417628fcd112" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="ad83eaaa-ea5d-4022-9eca-78fdfef89047">
+      <elementDefinition Id="07e82821-2cfe-4137-a7dd-bca0e5d32bdb" />
+      <body>Producer will be either from SF or Netflix</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="452f15f0-9304-4558-8254-8900dc1fe45e">
+      <profileInstance Id="dcb91842-e082-4216-b3f1-83779d3b8eab" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0587646b-310c-4921-a151-e6a0ba6cab91">
+      <profileInstance Id="e9ca2c81-7f44-4b5a-95de-f7596fe2a307" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="f268f272-fbf8-419f-971b-9ea79d9ec2fe" name="MovieSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5981e46-0ce4-49f8-bc18-97c557d668ba" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a5a7bb4e-bc17-4699-b7a3-89fdb8fb9aa6" name="Producer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da8b04a9-1088-4df9-8250-471c045d3556" />
+        <targetEnds>
+          <association Id="de41df01-45cc-457a-9113-71f706c2c7af" isDerived="false" sourceEndRoleName="Producer" targetEndRoleName="Upload Movie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="440598c6-4b38-4d26-80c8-acf55ceea062" LastKnownName="Upload Movie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a2d4193-29ac-4d04-817c-dfd5c332ddb7" name="Producer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6370fac7-ebd5-467a-b637-7f5c65e110d0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="372894de-9edc-4ed9-8843-268c0a2d7fcd" name="Upload Movie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="28de81d7-e23f-4428-8148-e7faa9ce97e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8a00f44e-5c60-4e50-abcf-f7ce7a614645" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="d14c677d-af2d-4d97-9092-9a16c19bd727" name="Consumer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0988fb50-a980-4f33-9d1b-c671a8a564cc" />
+        <targetEnds>
+          <association Id="3243f569-db7b-4006-b806-da06cbdc9ea3" isDerived="false" sourceEndRoleName="Consumer" targetEndRoleName="View Movie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="304f84bf-6105-421e-80d6-677ba66b3002" LastKnownName="View Movie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5982c864-0250-46d8-b625-f9f2b7bd04ce" name="Consumer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2a2114bb-f15f-4c85-9ef4-f65737875d92" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a2cbd59b-954f-4bef-a286-c565f0fd845f" name="View Movie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d4bfba64-7048-4294-9754-a27290327236" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c1fd876-8545-45bb-8698-c579f3863433" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="304f84bf-6105-421e-80d6-677ba66b3002" name="View Movie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5157dbab-68fd-44d9-962e-5efe448a67f0" />
+        <subjects>
+          <subsystemMoniker Id="f268f272-fbf8-419f-971b-9ea79d9ec2fe" LastKnownName="MovieSystem" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="440598c6-4b38-4d26-80c8-acf55ceea062" name="Upload Movie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3573fc8e-7a4c-406d-8e0c-484e07d1c302" />
+        <subjects>
+          <subsystemMoniker Id="f268f272-fbf8-419f-971b-9ea79d9ec2fe" LastKnownName="MovieSystem" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="2c3c93a8-8618-4207-beaa-417628fcd112" name="TentaSolution.Modeling">
+    <elementDefinition Id="3d3cd93b-1803-48af-83d5-318c7e423793" />
+  </package>
+</useCaseModelRoot>

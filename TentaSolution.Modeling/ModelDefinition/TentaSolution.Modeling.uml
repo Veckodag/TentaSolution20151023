@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="3d3cd93b-1803-48af-83d5-318c7e423793"
+  name="TentaSolution.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="07e82821-2cfe-4137-a7dd-bca0e5d32bdb">
+      <body>Producer will be either from SF or Netflix</body>
+    </comment>
+    <comment
+      Id="2e745e0f-385f-4c9f-9ed6-a2a13b5045f9">
+      <body>A Movie comprises of Actors and Producers. A Movie can have many actors . A producer can have many movies.</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <subsystem
+        Id="f5981e46-0ce4-49f8-bc18-97c557d668ba"
+        name="MovieSystem"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="da8b04a9-1088-4df9-8250-471c045d3556"
+        name="Producer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8a00f44e-5c60-4e50-abcf-f7ce7a614645"
+            isDerived="false"
+            sourceEndRoleName="Producer"
+            targetEndRoleName="Upload Movie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3573fc8e-7a4c-406d-8e0c-484e07d1c302"
+              LastKnownName="Upload Movie"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6370fac7-ebd5-467a-b637-7f5c65e110d0"
+                  name="Producer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="28de81d7-e23f-4428-8148-e7faa9ce97e3"
+                  name="Upload Movie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0988fb50-a980-4f33-9d1b-c671a8a564cc"
+        name="Consumer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0c1fd876-8545-45bb-8698-c579f3863433"
+            isDerived="false"
+            sourceEndRoleName="Consumer"
+            targetEndRoleName="View Movie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5157dbab-68fd-44d9-962e-5efe448a67f0"
+              LastKnownName="View Movie"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a2114bb-f15f-4c85-9ef4-f65737875d92"
+                  name="Consumer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4bfba64-7048-4294-9754-a27290327236"
+                  name="View Movie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5157dbab-68fd-44d9-962e-5efe448a67f0"
+        name="View Movie"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f5981e46-0ce4-49f8-bc18-97c557d668ba"
+            LastKnownName="MovieSystem"
+            LastKnownLocation="TentaSolution.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3573fc8e-7a4c-406d-8e0c-484e07d1c302"
+        name="Upload Movie"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f5981e46-0ce4-49f8-bc18-97c557d668ba"
+            LastKnownName="MovieSystem"
+            LastKnownLocation="TentaSolution.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c6f09651-bb4b-429c-940b-48da64817a1c"
+        name="Consumer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="dcefa36d-5fa7-4060-86b7-e488fa333d6a"
+            isDerived="false"
+            sourceEndRoleName="Consumer"
+            targetEndRoleName="Movie"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="84905b94-7d25-444c-8f30-407005e7e243"
+              LastKnownName="Movie"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="acb28b24-c867-4cd9-ac73-b9ec88076c09"
+                  name="Consumer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5755daaa-9b90-4adc-8b63-b1ceeaa8cde9"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a1fa5315-8cd0-4636-82d8-498ae7a5fefb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c711b2cd-8c45-4d72-9b7f-a2a04fa21f11"
+                  name="Movie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bee66029-9713-4d97-bc7a-c29f07f5374a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4b504783-82f7-41db-a032-6c6cd7062aaa"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="21a5c8a0-a5b1-437e-a9d0-da3fbd1146d0"
+            name="ViewMovie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e5caa54c-d440-4c3e-9641-d9a2a9e2f138"
+        name="Producer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="7dc62653-4e82-4381-a7bd-0abcd792a24f"
+            name="UploadMovie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="84905b94-7d25-444c-8f30-407005e7e243"
+        name="Movie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d5be3815-c1f7-4b36-9917-dacd36fabe48"
+            isDerived="false"
+            sourceEndRoleName="Movie"
+            targetEndRoleName="Actor"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7e641c1c-9df7-44ec-9cec-9fbc8635c127"
+              LastKnownName="Actor"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a40f654-24b4-4d9d-b255-0053e0058872"
+                  name="Movie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98c302b5-171e-42d5-b627-a1bc686df5b9"
+                  name="Actor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6846575e-7266-4926-bb03-361b5a0ccd9c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="96ba13fb-c4e6-492e-8961-0a734b3cf48a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="638b23b0-7f5a-4b81-a6bd-a11dca386903"
+            isDerived="false"
+            sourceEndRoleName="Movie"
+            targetEndRoleName="Producer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e5caa54c-d440-4c3e-9641-d9a2a9e2f138"
+              LastKnownName="Producer"
+              LastKnownLocation="TentaSolution.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="53cfaea2-e0b8-4ec6-93ca-d75a2a8ab87f"
+                  name="Movie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="feef8132-e498-419f-b935-1889798b57ab"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bbecc71d-0d4d-4ea9-83f8-5876b319ef8d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e4cf948-9636-40d1-bb25-d54f98f2c5ec"
+                  name="Producer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9cc4f7ab-4b80-41f8-a104-16e4c56dea06"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ab75a0ad-a8cc-4a08-bf14-e1bb101aaed5"
+            name="ReleaseDate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7ef7e289-614e-48df-9be1-80d3e4925904"
+                LastKnownName="DateTime"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4ee60085-06b4-41ea-b014-49ac14348574"
+            name="Actors"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9412cff7-e356-48bf-a383-313633a67c8e"
+            name="LengthInMinutes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6247b804-6fa3-42b1-92b0-0b9225043b07"
+                LastKnownName="Int"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e0275a5f-94ed-4b3f-833a-d64b514a87fb"
+            name="Website"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7ef7e289-614e-48df-9be1-80d3e4925904"
+        name="DateTime" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5df4e1cd-d48e-44e8-925f-c4b3d9b0ae68"
+        name="Actor" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6247b804-6fa3-42b1-92b0-0b9225043b07"
+        name="Int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7e641c1c-9df7-44ec-9cec-9fbc8635c127"
+        name="Actor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="9916b335-18c3-470d-ab39-c5cc13c3b52a"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="b61f7e14-1ac2-4eed-89f2-eabfac22cee3"
+        name="WatchingMovie"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="f15d58cc-081f-469b-ba1c-360f3e9dd4d5">
+            <body>1. A producer uploads a movie. The movie will be available for consumers to watch.
+
+2. Consumers watch the available movies that producers have uploaded</body>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="bfb82be2-4692-408e-ae96-55642523ef6c"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9eca90aa-a829-4fc1-901a-ab102e595271"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="681a1a84-ca68-4225-8b40-6ae1e9114e25"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="59ef20f0-34d2-47d8-ae53-76f14c216cb7"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8683436d-e5f6-4e52-9eae-c5dfc68c2151"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="681a1a84-ca68-4225-8b40-6ae1e9114e25"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c47f451d-0f12-4050-9e09-c065f80cf69e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TentaSolution.Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9791b136-bbc6-47db-8343-fd91c51021a5"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="d12f1820-11a0-4e4c-9e7e-acc3a698bcd6"
+                LastKnownName="producer : Producer"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="59ef20f0-34d2-47d8-ae53-76f14c216cb7"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8683436d-e5f6-4e52-9eae-c5dfc68c2151"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d854624a-7d04-4d27-b5da-213cf83fe270"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="d12f1820-11a0-4e4c-9e7e-acc3a698bcd6"
+                LastKnownName="producer : Producer"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9eca90aa-a829-4fc1-901a-ab102e595271"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="70c1d2ba-616b-457e-8035-6440cf676048"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TentaSolution.Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d443ef05-4564-4bcf-9351-1b36bcef4954"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5b79b4e6-3b07-40c2-a8d9-14adb91f672a"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="004c7954-a548-4bf5-b8d2-693483c46452"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2cce726f-b475-4611-aa97-2e31b962b28c"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="07095f40-e010-416c-8dfd-9440a136fec4"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="004c7954-a548-4bf5-b8d2-693483c46452"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f8f5fbff-3a10-4fde-a234-2181bb44af52"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TentaSolution.Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d4833ecd-bb2f-471c-9a18-aa04119d4205"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="8d658d62-67d9-44c6-afd6-3a3b9e438cd9"
+                LastKnownName="consumer : Consumer"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2cce726f-b475-4611-aa97-2e31b962b28c"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="07095f40-e010-416c-8dfd-9440a136fec4"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6b8f762d-3f86-4b5f-b9b9-33afb0bf1d45"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="8d658d62-67d9-44c6-afd6-3a3b9e438cd9"
+                LastKnownName="consumer : Consumer"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5b79b4e6-3b07-40c2-a8d9-14adb91f672a"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a471a601-6acb-49af-b6b2-3bcb1e9007b5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TentaSolution.Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+                LastKnownName="movie : Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="d12f1820-11a0-4e4c-9e7e-acc3a698bcd6"
+            name="producer : Producer"
+            isActor="true"
+            lifelineDisplayName="producer : Producer">
+            <represents>
+              <propertyMoniker
+                Id="0c1a9c2d-dfc5-4eb4-90fa-0a672578a6ef"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9791b136-bbc6-47db-8343-fd91c51021a5"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d854624a-7d04-4d27-b5da-213cf83fe270"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="8d658d62-67d9-44c6-afd6-3a3b9e438cd9"
+            name="consumer : Consumer"
+            isActor="true"
+            lifelineDisplayName="consumer : Consumer">
+            <represents>
+              <propertyMoniker
+                Id="106afc2d-492b-4990-8d87-86752dea6b64"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d4833ecd-bb2f-471c-9a18-aa04119d4205"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6b8f762d-3f86-4b5f-b9b9-33afb0bf1d45"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="5b75b794-cdb5-4181-bdb6-86727232736f"
+            name="movie : Movie"
+            isActor="false"
+            lifelineDisplayName="movie : Movie">
+            <represents>
+              <propertyMoniker
+                Id="eb4cc1ad-c2f9-479e-a993-db44cf4cb52a"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="681a1a84-ca68-4225-8b40-6ae1e9114e25"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9eca90aa-a829-4fc1-901a-ab102e595271"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="004c7954-a548-4bf5-b8d2-693483c46452"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5b79b4e6-3b07-40c2-a8d9-14adb91f672a"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="650c0e0d-0ac4-42ef-ac1f-a6241a471aab"
+            name="UploadMovie"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9791b136-bbc6-47db-8343-fd91c51021a5"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="59ef20f0-34d2-47d8-ae53-76f14c216cb7"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="88ec2a6e-3bb6-4099-ab26-d65a72601991"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8683436d-e5f6-4e52-9eae-c5dfc68c2151"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d854624a-7d04-4d27-b5da-213cf83fe270"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7d65b307-d790-4555-816b-77ed522c740c"
+            name="WatchMovie"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d4833ecd-bb2f-471c-9a18-aa04119d4205"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2cce726f-b475-4611-aa97-2e31b962b28c"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d90823a2-804e-482b-9e27-095ef0540eae"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="07095f40-e010-416c-8dfd-9440a136fec4"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6b8f762d-3f86-4b5f-b9b9-33afb0bf1d45"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="106afc2d-492b-4990-8d87-86752dea6b64"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="0988fb50-a980-4f33-9d1b-c671a8a564cc"
+                LastKnownName="Consumer"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eb4cc1ad-c2f9-479e-a993-db44cf4cb52a"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="84905b94-7d25-444c-8f30-407005e7e243"
+                LastKnownName="Movie"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0c1a9c2d-dfc5-4eb4-90fa-0a672578a6ef"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="da8b04a9-1088-4df9-8250-471c045d3556"
+                LastKnownName="Producer"
+                LastKnownLocation="TentaSolution.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c47f451d-0f12-4050-9e09-c065f80cf69e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="70c1d2ba-616b-457e-8035-6440cf676048"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f8f5fbff-3a10-4fde-a234-2181bb44af52"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a471a601-6acb-49af-b6b2-3bcb1e9007b5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

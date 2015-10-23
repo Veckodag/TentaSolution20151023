@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="9a8cd355-99e5-4227-b07c-bdfb899cbdfa" name="MovieSystemClasses" linkedPackageId="34ee6a2d-0755-495b-97f8-0bf4ed08fe66" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="dd2465ad-4268-428d-92ec-b4e090ff7f4f">
+      <elementDefinition Id="2e745e0f-385f-4c9f-9ed6-a2a13b5045f9" />
+      <body>A Movie comprises of Actors and Producers. A Movie can have many actors . A producer can have many movies.</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="439587f3-3c34-4c04-a5ed-8578aaf3d39a">
+      <profileInstance Id="b03636d0-139d-4f37-a9e6-62e7ec89aff0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="41ba049d-f67d-4b0d-9889-6f88449acba6">
+      <profileInstance Id="ae599b38-2ece-49c7-9b1c-af41a977ae33" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f003447b-be08-443a-9721-e4e4bbc0bada" name="Consumer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6f09651-bb4b-429c-940b-48da64817a1c" />
+        <targetEnds>
+          <association Id="d6436d33-64e7-445d-a16c-666cc309303b" isDerived="false" sourceEndRoleName="Consumer" targetEndRoleName="Movie" isLeaf="false" isAbstract="false">
+            <classMoniker Id="15c09d10-3fd3-466c-b138-4aa3ab4fe791" LastKnownName="Movie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="532e56ce-1e3d-4f90-a1fb-66fe45d94f5e" name="Consumer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="eb1df0ff-4bde-45b5-82b0-adc0faafb26b" name="Lower" value="*">
+                      <elementDefinition Id="5755daaa-9b90-4adc-8b63-b1ceeaa8cde9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="189bc0ac-73f7-47dd-b177-fad60b514f2e" name="Upper" value="*">
+                      <elementDefinition Id="a1fa5315-8cd0-4636-82d8-498ae7a5fefb" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="acb28b24-c867-4cd9-ac73-b9ec88076c09" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46a93bf4-92fd-42d9-94e6-3228ede60c0a" name="Movie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="c8965650-102e-4c8f-b5bc-da7871ab6e01" name="Lower" value="1">
+                      <elementDefinition Id="bee66029-9713-4d97-bc7a-c29f07f5374a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ae846682-0893-49fe-90dc-43bac6c3ebba" name="Upper" value="1">
+                      <elementDefinition Id="4b504783-82f7-41db-a032-6c6cd7062aaa" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c711b2cd-8c45-4d72-9b7f-a2a04fa21f11" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dcefa36d-5fa7-4060-86b7-e488fa333d6a" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="0318ead8-1b53-4d21-9bc4-7997b47c6f66" name="ViewMovie" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21a5c8a0-a5b1-437e-a9d0-da3fbd1146d0" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3656ba23-9dec-41ca-822e-b5c7932117c0" name="Producer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e5caa54c-d440-4c3e-9641-d9a2a9e2f138" />
+        <ownedOperationsInternal>
+          <operation Id="3b77f500-06f4-4dc0-a5cc-5d5d2528016b" name="UploadMovie" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7dc62653-4e82-4381-a7bd-0abcd792a24f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="15c09d10-3fd3-466c-b138-4aa3ab4fe791" name="Movie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="84905b94-7d25-444c-8f30-407005e7e243" />
+        <targetEnds>
+          <association Id="5a1c7348-8a7d-4ee1-bee0-0f83380d9b9b" isDerived="false" sourceEndRoleName="Movie" targetEndRoleName="Actor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="604b52b7-0180-4833-8e58-6546d4cde2f3" LastKnownName="Actor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d496004-0ca0-40f7-8af0-4d9f83d1a68c" name="Movie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a40f654-24b4-4d9d-b255-0053e0058872" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a864385-eeb6-4c61-9fcf-84bffc50ffcb" name="Actor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="ec8c287c-e8fc-4bc1-a611-bbd6bbf0fde6" name="Lower" value="*">
+                      <elementDefinition Id="6846575e-7266-4926-bb03-361b5a0ccd9c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="0170575b-a400-4f3b-9d56-d422891cb9d8" name="Upper" value="*">
+                      <elementDefinition Id="96ba13fb-c4e6-492e-8961-0a734b3cf48a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="98c302b5-171e-42d5-b627-a1bc686df5b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d5be3815-c1f7-4b36-9917-dacd36fabe48" />
+          </association>
+          <association Id="8b1fe7b1-ddb2-4eaf-8e9e-c5d1c0f23824" isDerived="false" sourceEndRoleName="Movie" targetEndRoleName="Producer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3656ba23-9dec-41ca-822e-b5c7932117c0" LastKnownName="Producer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8fb6598d-5748-4b38-a2b4-51b567e7e8a9" name="Movie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="95a41ee2-05e7-4531-86bc-826642173b81" name="Lower" value="*">
+                      <elementDefinition Id="feef8132-e498-419f-b935-1889798b57ab" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="24dd7f6b-1a2d-4c01-bf1f-64dc2d584062" name="Upper" value="*">
+                      <elementDefinition Id="bbecc71d-0d4d-4ea9-83f8-5876b319ef8d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="53cfaea2-e0b8-4ec6-93ca-d75a2a8ab87f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="132918f7-e5bd-441b-a96a-deee39724431" name="Producer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="5e4cf948-9636-40d1-bb25-d54f98f2c5ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="638b23b0-7f5a-4b81-a6bd-a11dca386903" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="f8af2bdf-b377-471f-8b44-ba1742c47357" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9cc4f7ab-4b80-41f8-a104-16e4c56dea06" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b921d993-8d3f-4ef1-a4c9-f763934da3b2" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="4ae4799d-f67c-4a98-9087-336024a1d87d" name="ReleaseDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ab75a0ad-a8cc-4a08-bf14-e1bb101aaed5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cef7ede5-3f78-4123-a814-47296f6436f1" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="81e098fc-2303-4ce7-82d7-8424136b9e25" name="Actors" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4ee60085-06b4-41ea-b014-49ac14348574" />
+          </property>
+          <property Id="cfc056ac-4f64-4fe8-be7c-5b533c99d2c0" name="LengthInMinutes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9412cff7-e356-48bf-a383-313633a67c8e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0e4339be-ff74-4bcb-a540-9001dc226302" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="38684219-f4e9-45cb-a884-6544c9ca27bb" name="Website" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0275a5f-94ed-4b3f-833a-d64b514a87fb" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b921d993-8d3f-4ef1-a4c9-f763934da3b2" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cef7ede5-3f78-4123-a814-47296f6436f1" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7ef7e289-614e-48df-9be1-80d3e4925904" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0e4339be-ff74-4bcb-a540-9001dc226302" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
+        <elementDefinition Id="6247b804-6fa3-42b1-92b0-0b9225043b07" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="604b52b7-0180-4833-8e58-6546d4cde2f3" name="Actor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7e641c1c-9df7-44ec-9cec-9fbc8635c127" />
+        <ownedAttributesInternal>
+          <property Id="1395d619-fb56-44f0-8c52-43fadee785bd" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9916b335-18c3-470d-ab39-c5cc13c3b52a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b921d993-8d3f-4ef1-a4c9-f763934da3b2" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="34ee6a2d-0755-495b-97f8-0bf4ed08fe66" name="TentaSolution.Modeling">
+    <elementDefinition Id="3d3cd93b-1803-48af-83d5-318c7e423793" />
+  </package>
+</logicalClassDesignerModel>
